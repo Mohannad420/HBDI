@@ -1,0 +1,122 @@
+body{
+    font-weight: 500;
+    width: 100%;
+}
+
+:root{
+    --nav:#19283f;
+    --green:#33d1cc;
+    --btn:#ff3150;
+    --text:#ffc400;
+    --sec: #eff7fa;
+    --sos: #ff000079;
+}
+
+.main-btn {
+    z-index: 1;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+  }
+  
+  .main-btn:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+  }
+  
+  @keyframes jelly {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+  }
+  
+.navbar .nav-link{
+    color:white;
+}
+.navbar .nav-link:hover,.navbar .nav-link:focus,.navbar .nav-link.ctive{
+    color: var(--green);
+} 
+.search>i{
+    color: var(--green);
+}
+
+
+.main-btn{
+    background-color: var(--btn);
+    color: var(--sec);
+    text-decoration: none;
+}
+.main-btn:hover ,.main-btn:focus{
+    background: #ff31506b;
+    color: whitesmoke;
+}
+.down-nav .nav-link{
+  color: black;
+  
+}
+.down-nav .nav-link:hover{
+color: var(--btn);
+}
+
+ /*-*/
+
+.box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative  ;
+  background: var(--green) solid 4px ;  
+}
+.box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+}
+.box:hover::before {
+  transform: translateX(0);
+}
+/* End Our Work */
+
+
+#email , #email:focus ,#email:active ,#email::placeholder{
+  background: none;
+  border: none;
+  border-bottom: white solid 1px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  height: 40px;
+  outline: none;
+}
+
+#uplo{
+  background-color:rgba(6, 103, 221, 0.116) ;
+  width: 150%;
+  transform: translate(-26%,0);
+  border: dotted 6px rgba(4, 112, 155, 0.74);
+  text-shadow: #555e8b 4px 3px;
+} 
+
+#texs{
+visibility: hidden;
+}
